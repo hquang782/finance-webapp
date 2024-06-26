@@ -10,6 +10,8 @@ using api.Models;
 using api.Mappers;
 using api.Dtos.Stock;
 using api.Interfaces;
+using api.Helpers;
+using Microsoft.AspNetCore.Authorization;
 
 namespace api.Controllers
 {
@@ -28,13 +30,14 @@ namespace api.Controllers
 
         // GET: api/Stock
         [HttpGet]
-        public async Task<IActionResult> GetAll()
+        [Authorize]
+        public async Task<IActionResult> GetAll([FromQuery] QueryObject queryObject)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
-            var stocks = await _stockRepository.GetAllAsync();
+            var stocks = await _stockRepository.GetAllAsync(queryObject);
             var stockDto = stocks.Select(x => x.ToStockDto());
             return Ok(stockDto);
         }

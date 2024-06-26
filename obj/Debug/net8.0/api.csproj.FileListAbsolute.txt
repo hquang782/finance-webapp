@@ -265,3 +265,4 @@ D:\forwork\donet\api\obj\Debug\net8.0\api.sourcelink.json
 D:\forwork\donet\api\bin\Debug\net8.0\Microsoft.AspNetCore.JsonPatch.dll
 D:\forwork\donet\api\bin\Debug\net8.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 D:\forwork\donet\api\bin\Debug\net8.0\Newtonsoft.Json.Bson.dll
+D:\forwork\donet\api\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
